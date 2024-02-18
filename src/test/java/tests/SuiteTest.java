@@ -56,7 +56,6 @@ public class SuiteTest extends BaseTest {
                 .create(project.getCode().toUpperCase(), suite);
         repositoryPage
                 .openPage(project.getCode().toUpperCase())
-                .isPageOpened()
                 .verifyIfSuiteExist(suite)
                 .clickOnTheEditSuiteButton(suite);
         suitesPage
@@ -89,7 +88,6 @@ public class SuiteTest extends BaseTest {
                 .create(project.getCode().toUpperCase(), suite);
         repositoryPage
                 .openPage(project.getCode().toUpperCase())
-                .isPageOpened()
                 .verifyIfSuiteExist(suite)
                 .clickOnTheDeleteSuiteButton(suite)
                 .confirmDeleting()

@@ -29,7 +29,6 @@ public class RepositoryPage {
 
     @Step("Opening the 'Repository Page'")
     public RepositoryPage isPageOpened() {
-        sleep(1500);
         $(CREATE_CASE_BUTTON).shouldBe(Condition.visible);
         return this;
     }
@@ -105,6 +104,7 @@ public class RepositoryPage {
 
     @Step("Check that the test suite has been created")
     public RepositoryPage verifyIfSuiteExist(Suite suite) {
+        sleep(1500);
         $x(String.format(SUITE_IN_LIST, suite.getTitle())).shouldBe(Condition.visible);
         log.info("Suite with title {} has been created", suite.getTitle());
         return this;
