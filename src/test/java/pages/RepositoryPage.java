@@ -29,6 +29,7 @@ public class RepositoryPage {
 
     @Step("Opening the 'Repository Page'")
     public RepositoryPage isPageOpened() {
+        sleep(1500);
         $(CREATE_CASE_BUTTON).shouldBe(Condition.visible);
         return this;
     }
